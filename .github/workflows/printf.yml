@@ -20,8 +20,7 @@ jobs:
       - name: Clone Tripouille/printfTester
         run: |
           git clone https://github.com/Tripouille/printfTester.git tester
-          cp -r tester/* .
-          rm -rf tester
+          cd tester
 
       - name: List files to verify Makefile location
         run: ls -la
