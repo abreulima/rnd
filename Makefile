@@ -5,12 +5,9 @@ NAME = libftprintf.a
 SRCS = ft_printf.c
 OBJS = $(SRCS:.c=.o)
 
-LIBFT = libft/libft.a
-
 all: $(NAME)
 
-$(NAME): $(OBJS) $(LIBFT)
-	cp $(LIBFT) $(NAME)
+$(NAME): $(OBJS)
 	ar rcs $(NAME) $(OBJS)
 
 $(LIBFT):
