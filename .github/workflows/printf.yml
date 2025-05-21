@@ -19,11 +19,13 @@ jobs:
 
       - name: Clone Tripouille/printfTester
         run: |
-          git clone https://github.com/Tripouille/printfTester.git tester
-          cd tester
-
+          git clone https://github.com/Tripouille/printfTester.git
+          
       - name: List files to verify Makefile location
         run: ls -la
     
       - name: Build and Run Mandatory Tests
-        run: TERM=xterm make m
+        run: |
+          cd printfTester
+          export TERM=xterm
+          make m
