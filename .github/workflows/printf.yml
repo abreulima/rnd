@@ -23,5 +23,8 @@ jobs:
           cp -r tester/* .
           rm -rf tester
 
+      - name: List files to verify Makefile location
+        run: ls -la
+    
       - name: Build and Run Mandatory Tests
         run: TERM=xterm make m
