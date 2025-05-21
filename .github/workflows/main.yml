@@ -1,18 +1,20 @@
----
 name: Norminette
 
 on:
   push:
+    branches:
+      - main
 
 jobs:
   check-norminette:
     name: Norminette
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Norminette
-        uses: 42School/norminette@v3.3.58
+      - name: Run Norminette
+        uses: 42school/norminette@3.3.58
         with:
-          args: '-RCheckForbiddenSourceHeader'
+          args: '-R CheckForbiddenSourceHeader'
