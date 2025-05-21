@@ -13,6 +13,6 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Norminette
-        uses: 42School/norminette@3.3.58
+        uses: 42School/norminette
         with:
           args: '-RCheckForbiddenSourceHeader'
