@@ -1,0 +1,30 @@
+name: printfTester CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  run-tests:
+    name: Run printfTester
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout your ft_printf repo
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y valgrind
+
+      - name: Clone Tripouille/printfTester
+        run: |
+          git clone https://github.com/Tripouille/printfTester.git tester
+          cp -r tester/* .
+          rm -rf tester
+
+      - name: Build and Run Mandatory Tests
+        run: make m
