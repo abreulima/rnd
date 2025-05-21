@@ -15,15 +15,13 @@ jobs:
       - name: Checkout your ft_printf repo
         uses: actions/checkout@v4
 
-
-
       - name: Clone Tripouille/printfTester
         run: |
           git clone https://github.com/Tripouille/printfTester.git
-          
+
       - name: List files to verify Makefile location
-        run: ls -la
-    
+        run: ls -la printfTester
+
       - name: Build and Run Mandatory Tests
         run: |
           cd printfTester
