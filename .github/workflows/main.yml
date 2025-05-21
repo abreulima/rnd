@@ -11,10 +11,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
-
-      - name: Run Norminette
-        uses: 42school/norminette@v3.3.58
+      - uses: actions/checkout@v3
+      - uses: alexandregv/norminette-action@v3
         with:
-          args: '-R CheckForbiddenSourceHeader'
+          flags: '.'
