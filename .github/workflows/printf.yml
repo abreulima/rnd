@@ -15,6 +15,11 @@ jobs:
       - name: Checkout your ft_printf repo
         uses: actions/checkout@v4
 
+      - name: Install dependencies
+        run: |
+          sudo apt update
+          sudo apt install -y valgrind
+          
       - name: Clone Tripouille/printfTester
         run: |
           git clone https://github.com/Tripouille/printfTester.git
