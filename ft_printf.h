@@ -1,5 +1,5 @@
-#ifndef LIBFT_PRINT_H
-#define LIBFT_PRINT_H
+#ifndef FT_PRINTF_H
+#define FT_PRINTF_H
 
 #include <string.h>
 #include <stdlib.h>
